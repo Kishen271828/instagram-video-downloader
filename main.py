@@ -4,7 +4,7 @@ def download_video(post_url):
     # Initialize Instaloader
     L = instaloader.Instaloader()
 
-    # Download the post using the URL
+    # Extract the shortcode from the URL and download the post
     post = instaloader.Post.from_shortcode(L.context, post_url.split("/")[-2])  # Get the shortcode from URL
     
     # Check if it's a video
@@ -15,6 +15,8 @@ def download_video(post_url):
     else:
         print("This is not a video.")
 
-# Example usage
-post_url = "https://www.instagram.com/reel/DGEa0WhIMVY/?igsh=Y2Y4cHVtNG94M2Yy"
+# Get the Instagram post URL from user input
+post_url = input("Enter the Instagram post URL: ")
+
+# Call the function to download the video
 download_video(post_url)
