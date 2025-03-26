@@ -1,1 +1,2 @@
-instaloader==4.10.0
+instaloader
+yt_dlp
